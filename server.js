@@ -1,17 +1,6 @@
 const express = require('express')
-const mysql = require('mysql')
-
-function connect() {
-    const connection = mysql.createConnection({
-        host: 'localhost'
-        
-    })
-
-    connection.connect()
-    return connection
-}
-
-const app = express()
+var serverroute=require("./client")
+var app=express()
 
 app.get('/', (request, response) => {
     response.send('welcome to my application')
